@@ -1,0 +1,25 @@
+/*Video Container*/
+.videoBox{
+   background-color: blue;
+}
+
+/**/
+
+/*Video itself*/
+#video{
+    
+}
+
+
+/*drage and drop*/
+
+.dragDropContainer li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    left: -40px
+}
+
+#dropBox{
+    margin-top:20px; height:70px;width:165px;border-radius:10px; border: 2px solid blue;
+}

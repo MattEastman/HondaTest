@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/dragDrop.js"></script>
+</head>
+
+<body>
+<p>Q: Please drag and drop the instructions into the correct order from left to right:</p>
+
+<div class="dragDropContainer">
+<!-- Drop Boxes-->
+   <ul>
+       <li><div id="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div></li>
+       <li><div id="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div></li>
+       <li><div id="dropBox" ondrop="drop(event)" ondragover="allowDrop(event)"></div></li>
+   </ul>
+   
+<!-- drink, pour, grab imgs  -->
+    <img id="drink_drag" src="../Assets/drag_drink.png" draggable="true" ondragstart="drag(event)"  height="70">
+    <img id="pour_drag" src="../Assets/drag_pour.png" draggable="true" ondragstart="drag(event)"  height="70">
+    <img id="grab_drag" src="../Assets/drag_grab.png" draggable="true" ondragstart="drag(event)"  height="70">
+    
+</div>
+
+    <button id="check" onclick="checkQuiz()" style="margin-top:20px;">Grade My Quiz</button>
+ 
+</div>
+<!--I first wrote the javascript code into the .html until it was dont then I moved it an external js file -dragDrop.js
+
+<script type='text/javascript'>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+        console.log('allowDrop, drag, drop functions complete')
+</script>
+-->
+
+
+<!-- quiz logic (not done) - 1. Check if all dropboxes are filled. 2. check order //3. respond correct or try again
+
+<script type='text/javascript'>
+    var checkQuiz = document.getElementById("check");
+    checkQuiz.addEventListener("click",function(){
+       if(dropBox.drop == true ){
+           alert('Great Now we will grade your quiz');
+       }
+        else {alert('fill in all boxes'); }
+});    
+
+</script>
+-->
+
+</body>
+</html>

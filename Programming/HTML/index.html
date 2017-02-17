@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/videoControls.js"></script>
+</head>
+
+<body>
+
+<div class="video">
+    <video width="700" height="400" id="video">
+       <source src="../Assets/soda_video.mp4" type="video/mp4">
+        <!-- Could re-export video in ogv and webm forms
+               <source src="../Assets/soda_video.mp4" type="video/ogv">
+               <source src="../Assets/soda_video.mp4" type="video/webm">
+         -->
+    <p>
+      Your browser doesn't support HTML5 video.
+      <a href="../Assets/soda_video.mp4">Download</a> the video instead.
+    </p>
+        
+    </video>
+    
+<!-- Video Controls Panel -->
+  <div id="videoControls">
+    <button onclick="playButton()" type="button" id="playPause">Play</button>
+        <!-- more contrls to add
+            <input type="range" id="seekBar" value="0">
+            <button type="button" id="mute">Mute</button>
+            <input type="range" id="volumeBar" min="0" max="1" step="0.1" value="1">
+            <button type="button" id="fullScreen">Full-Screen</button>
+        -->
+  </div>
+       
+</div>
+
+<!--
+I first wrote the javascript code into the .html until it was dont then I moved it an external js file -videoControls.js
+
+<script type='text/javascript'>
+window.onload = function() {
+
+  // Video
+  var video = document.getElementById("video");
+
+  // Buttons
+  var playButton = document.getElementById("playPause");
+  // var muteButton = document.getElementById("mute");
+  // var fullScreenButton = document.getElementById("fullScreen");
+  // Sliders
+  //var seekBar = document.getElementById("seekBar");
+  //var volumeBar = document.getElementById("volumeBar");
+    
+    console.log("onload complete");
+
+
+    playButton.addEventListener("click", function() {
+  if (video.paused == true) {
+    // Play the video
+    video.play();
+
+    // Update the button text to 'Pause'
+    playButton.innerHTML = "Pause";
+  } else {
+    // Pause the video
+    video.pause();
+
+    // Update the button text to 'Play'
+    playButton.innerHTML = "Play";
+        } 
+    });
+    }
+
+    console.log("Video Toggle complete");
+</script>
+-->
+<!-- Alert After video-->
+<script type='text/javascript'>
+    document.getElementById('video').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+        alert('Video ended. Video Test complete');
+        console.log("Video Ended. alert fired.");
+    }
+</script>
+
+
+
+</body>
+</html>
